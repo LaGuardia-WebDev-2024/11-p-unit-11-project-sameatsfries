@@ -1,12 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Delius&family=Poetsen+One&display=swap");
-
-/* ======================== CSS Rule #1 */
-html {
-  background-color: white;
-  padding-left: 20px;
+body {
+  font-family: Arial, sans-serif;
+  margin: 16px;
+  background: #f7f7f7;
+  color: #222;
 }
 
-/* ======================== CSS Rule #2 */
 h1 {
-  font-family: "Poetsen One", sans-serif;
+  font-size: 26px;
+  margin-bottom: 16px;
 }
+
+button {
+  padding: 10px 14px;
+  margin-right: 8px;
+  margin-bottom: 16px;
+}
+
+.photo-row {
+  display: flex;
+  gap: 8px;
+}
+
+.photo {
+  width: 150px;
+  border: 2px solid #aaa;
+}
+
