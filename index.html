@@ -1,16 +1,16 @@
 <!-- Unit 11 Project
 Requirements
-[  ] $() Select by Element, ID AND Class 
-[  ] Use Three Different jQuery Methods 
-[  ] Add Five CSS Declarations
-[  ] Include Three Images
+
+
+
+
 
 Select ONE Additional 
-[ no ] Feature 1 - Use .hide() & .show() method
+
 [ no ] Feature 2 - Use .addClass() method
 [ no ] Feature 3 - Use .slideDown() method
 [ no ] Feature 4 - Use .mouseover() method
-[ no ] Feature 5 - Use .fadeIn() method
+
 -->
 
 <!DOCTYPE html>
@@ -21,41 +21,70 @@ Select ONE Additional
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <button id="mem1-button">photo 1</button>
-    <button id="mem2-button">photo 2</button>
-    <button id="mem3-button">photo 3</button>
+ 
     <h1>top photos 3<span>This Year</span></h1>
-    <ol>
+    <ol id="photo-list">
       <li>
         <h3 id="mem1">apple</h3>
         <p>apple</p>
         <img class="photo" src="https://i5.walmartimages.com/seo/Fresh-Red-Delicious-Apple-Each_7320e63a-de46-4a16-9b8c-526e15219a12_3.e557c1ad9973e1f76f512b34950243a3.jpeg" alt="Photo 1" />
+      <button id="mem1-button">photo 1</button>
+      
+      </li>
+  
+
+      <li>
+        <h3 id="mem2">orange</h3>
+        <p>orange</p>
+        <img class="photo" src="https://tse2.mm.bing.net/th/id/OIP.FqeiQB2Ip9bAYbSsVdrJbAHaHC?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Photo 2" />
+     <button id="mem2-button">photo 2</button>
+     
       </li>
 
       <li>
-        <h3 id="mem2">apple</h3>
-        <p>apple</p>
-        <img class="photo" src="https://i5.walmartimages.com/seo/Fresh-Red-Delicious-Apple-Each_7320e63a-de46-4a16-9b8c-526e15219a12_3.e557c1ad9973e1f76f512b34950243a3.jpeg" alt="Photo 2" />
-      </li>
-
-      <li>
-        <h3 id="mem3">apple</h3>
-        <p>apple</p>
-        <img class="photo" src="https://i5.walmartimages.com/seo/Fresh-Red-Delicious-Apple-Each_7320e63a-de46-4a16-9b8c-526e15219a12_3.e557c1ad9973e1f76f512b34950243a3.jpeg" alt="Photo 3" />
+        <h3 id="mem3">grapefruit</h3>
+        <p>grapefruit</p>
+        <img class="photo" src=" https://www.instacart.com/image-server/466x466/filters:fill(FFF,true):format(webp)/www.instacart.com/assets/domains/product-image/file/large_dc72b2c4-605a-4dd8-a341-614dbe9f76b5.jpg" alt="Photo 3" />
+     <button id="mem3-button">photo 3</button>
+     
       </li>
     </ol>
+
+<button id="reset">reset</button>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       $(function () {
-        $("button").css("background-color", "#f0f0f0");
+        $("button").css("background-color", "orange");
 
         $("#mem1-button").click(function () {
-          $("#mem1").css("color", "purple");
+          $("#mem1").css("color", "red");
+          $("#mem2").css("color", "black");
+          $("#mem3").css("color", "black");
         });
 
+         $("#mem2-button").click(function () {
+          $("#mem2").css("color", "red");
+          $("#mem3").css("color", "black");
+          $("#mem1").css("color", "black");
+        });
+
+         $("#mem3-button").click(function () {
+          $("#mem3").css("color", "red");
+          $("#mem2").css("color", "black");
+          $("#mem1").css("color", "black");
+        });
+$("#reset").click(function () {
+ $(".photo").fadeIn();
+ $("#mem3").css("color", "black");
+          $("#mem2").css("color", "black");
+          $("#mem1").css("color", "black");
+      });
+
+
+
         $(".photo").click(function () {
-          $(this).hide();
+          $(this).fadeOut();
         });
       });
     </script>
